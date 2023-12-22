@@ -16,11 +16,16 @@ const Loader = () => {
       duration: 5,
       ease: "expo.inOut",
     }); // access object by using .current
+
+    gsap.to(progressRef.current, {
+      scale: 1,
+      duration: 5,
+      ease: "expo.inOut",
+    });
   }, []); // empty dependency array, run once on load
 
   return (
     <div className={styles.loader__wrapper} ref={wrapperRef}>
-      {" "}
       {/* targets using ref */}
       <div className={styles.loader__progressWrapper}>
         <div className={styles.loader__progress} ref={progressRef}></div>
